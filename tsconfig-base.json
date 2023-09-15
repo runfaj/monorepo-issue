@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* general build standards */
+    "module": "nodenext", // how import/export is used
+    "target": "ES2022", // also auto-determines "lib" value
+    "moduleResolution": "nodenext", // finding/resolving modules
+
+    /* recommended options for our node env */
+    "strict": false, // we don't want to force untyped things to require typings
+    "esModuleInterop": true, // required for node to work with any packages that still use commonjs
+    "skipLibCheck": true, // optimization mostly
+    "forceConsistentCasingInFileNames": true, // need since mac doesn't do case-sensitive files, but linux does
+
+    /* additional build options or checks to enforce */
+    "declaration": true, // emits .d.ts files. Useful for intellisense and monorepo
+    "declarationDir": "./types",
+    "declarationMap": true, // required for monorepo and editor detection
+    "resolveJsonModule": true,
+    "noUnusedLocals": true, // code quality
+    "noUnusedParameters": true, // code quality
+    "noImplicitReturns": true, // code quality
+    "noFallthroughCasesInSwitch": true, // code quality
+    "composite": true, // required for monorepo
+  }
+}

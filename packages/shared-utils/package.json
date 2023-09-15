@@ -1,0 +1,12 @@
+{
+  "name": "shared-utils",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.9",
+    "shared-constants": "workspace:*"
+  },
+  "devDependencies": {
+    "shared-types": "workspace:*"
+  }
+}

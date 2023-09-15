@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "references": [
+    { "path": "../../packages/shared-constants" },
+    { "path": "../../packages/shared-types" },
+    { "path": "../../packages/shared-utils" }
+  ],
+  "include": ["**/*"]
+}

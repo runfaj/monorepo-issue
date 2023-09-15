@@ -1,0 +1,53 @@
+{
+  "name": "main-app",
+  "private": true,
+  "type": "module",
+  "types": "types",
+  "scripts": {
+    "dev": "concurrently --names vite,node 'yarn dev:frontend' 'yarn dev:backend'",
+    "dev:frontend": "vite",
+    "dev:backend": "node --watch --loader=tsx src/server/main.ts",
+    "build": "tsc && vite build",
+    "start": "node --watch --loader=tsx src/server/main.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "yarn build && NODE_ENV=production yarn start"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.5.0",
+    "axios-retry": "^3.7.0",
+    "classnames": "^2.3.2",
+    "express": "^4.18.2",
+    "lodash-es": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-inlinesvg": "^4.0.3",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.15.0",
+    "shared-constants": "workspace:*",
+    "shared-utils": "workspace:*",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/lodash-es": "^4.17.9",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "autoprefixer": "^10.4.15",
+    "concurrently": "^8.2.1",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.29",
+    "sass": "^1.66.1",
+    "shared-types": "workspace:*",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5"
+  }
+}

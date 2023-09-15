@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node", "express", "vite/client"],
+
+    /* Bundler mode */
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+
+    /* Linting */
+    "strict": true,
+    "useUnknownInCatchVariables": true
+  },
+  "exclude": ["node_modules"],
+  "references": [
+    { "path": "./tsconfig.vite.json" },
+    { "path": "../../packages/shared-constants" },
+    { "path": "../../packages/shared-types" },
+    { "path": "../../packages/shared-utils" },
+  ]
+}

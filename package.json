@@ -1,0 +1,17 @@
+{
+  "name": "project-theseus",
+  "private": true,
+  "packageManager": "yarn@3.6.3",
+  "version": "0.0.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "concurrently --names mainapp,dbService 'cd apps/main-app && yarn dev' 'cd services/db-service && yarn dev'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "files": [],
+  "exclude": [
+    "apps/**/tests/**",
+    "apps/**/dist/**",
+    "packages/**/tests/**",
+    "packages/**/dist/**",
+    "services/**/tests/**",
+    "services/**/dist/**"
+  ],
+  "references": [
+    { "path": "./apps/main-app" },
+    { "path": "./packages/shared-constants" },
+    { "path": "./packages/shared-types" },
+    { "path": "./packages/shared-utils" },
+    { "path": "./services/db-service" },
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "db-service",
+  "private": true,
+  "type": "module",
+  "types": "types",
+  "scripts": {
+    "dev": "node --watch --loader=tsx ./server.ts",
+    "start": "node --loader=tsx ./server.ts"
+  },
+  "dependencies": {
+    "@fastify/postgres": "^5.2.0",
+    "fastify": "^4.23.0",
+    "pg": "^8.11.3",
+    "shared-constants": "workspace:*",
+    "shared-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.6.0",
+    "@types/pg": "^8.10.2",
+    "shared-types": "workspace:*",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2"
+  }
+}

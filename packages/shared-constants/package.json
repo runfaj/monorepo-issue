@@ -1,0 +1,8 @@
+{
+  "name": "shared-constants",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "shared-types": "workspace:*"
+  }
+}
